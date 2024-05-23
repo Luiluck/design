@@ -30,12 +30,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^1.2.1
+  permission_handler: ^11.3.1
+  #firebase_core: 2.31.1
+  #firebase_storage: 11.7.6
+  #camera: ^0.10.6
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
-  google_fonts:
+  image_picker: ^1.1.1
+  #google_fonts:
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +74,15 @@ flutter:
   - assets/yellow.jpg
   - assets/LBB.png
   - assets/luis.png
+  - assets/left-arrow.png
+  - assets/rotate-arrow.png
+  - assets/cameralenss.jpg
+  - assets/Gray.jpg
+  - assets/food.jpg
+  - assets/lock.png
+  - assets/lockblack.png
+  - assets/pizza.jpg
+  - assets/salad.jpg
 
   #   - images/a_dot_ham.jpeg
 

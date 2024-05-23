@@ -9,7 +9,6 @@ class EditProfilePage extends StatefulWidget {
 class EditProfilePageState extends State<EditProfilePage> {
   String _name = '';
   int _age = 0;
-  String _nationality = '';
   String _email = '';
   double _height = 0.0;
   double _weight = 0.0;
@@ -19,7 +18,6 @@ class EditProfilePageState extends State<EditProfilePage> {
     // Validate inputs and update profile
     print('Name: $_name');
     print('Age: $_age');
-    print('Nationality: $_nationality');
     print('Email: $_email');
     print('Height: $_height');
     print('Weight: $_weight');
@@ -65,14 +63,7 @@ class EditProfilePageState extends State<EditProfilePage> {
                     });
                   },
                 ),
-                TextFormField(
-                  decoration: const InputDecoration(labelText: 'Nationality'),
-                  onChanged: (value) {
-                    setState(() {
-                      _nationality = value;
-                    });
-                  },
-                ),
+
                 TextFormField(
                   decoration: const InputDecoration(labelText: 'Email'),
                   onChanged: (value) {

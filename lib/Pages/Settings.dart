@@ -4,11 +4,18 @@ import 'ChangePasswordPage.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('SETTINGS'),
+        leading: IconButton( // Using an IconButton for the back button
+          icon: const Icon(Icons.arrow_back), // Back button icon
+          onPressed: () {
+            Navigator.pop(context); // Navigate back when pressed
+          },
+        ),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -19,6 +26,7 @@ class SettingsPage extends StatelessWidget {
         ),
         child: ListView(
           children: [
+            const SizedBox(height: 40), // Adding space between app bar and first list tile
             ListTile(
               title: const Text('Edit Profile'),
               leading: const Icon(Icons.person),
@@ -29,6 +37,7 @@ class SettingsPage extends StatelessWidget {
                 );
               },
             ),
+            const Divider(), // Adding a Divider widget for spacing
             ListTile(
               title: const Text('Change Password'),
               leading: const Icon(Icons.lock),
@@ -39,16 +48,12 @@ class SettingsPage extends StatelessWidget {
                 );
               },
             ),
+            const Divider(), // Adding a Divider widget for spacing
             ListTile(
               title: const Text('Delete Account'),
               leading: const Icon(Icons.delete),
               onTap: () {
-              },
-            ),
-            ListTile(
-              title: const Text('Nationality'),
-              leading: const Icon(Icons.account_circle),
-              onTap: () {
+                // Handle delete account action
               },
             ),
           ],
